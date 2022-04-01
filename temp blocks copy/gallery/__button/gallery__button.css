@@ -1,0 +1,15 @@
+.gallery__button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  width: 42px;
+  height: 34px;
+  background-color: transparent;
+}
+
+.gallery__button:hover {
+  opacity: .6;
+  transition: opacity .4s ease;
+  cursor: pointer;
+}

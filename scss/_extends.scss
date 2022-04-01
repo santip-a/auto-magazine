@@ -1,0 +1,34 @@
+%list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%link-reset {
+  text-decoration: none;
+  color: $color;
+
+    &:hover {
+      opacity: .6;
+      transition: opacity .4s ease;
+    }
+}
+
+%grid {
+  display: grid;
+}
+
+%picture-default {
+  display: block;
+  width: 100%;
+}
+
+%button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+

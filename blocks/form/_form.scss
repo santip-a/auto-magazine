@@ -1,0 +1,77 @@
+.form {
+  padding-right: 35px;
+
+  &__row {
+    display: flex;
+    max-width: 340px;
+  }
+
+  &__input {
+    display: inline-block;
+    margin: 0;
+    padding-left: 11px;
+    max-width: 170px;
+    min-height: 32px;
+    border: 1px solid $color;
+    border-right: none;
+    background: $background;
+    box-sizing: border-box;
+    outline: none;
+    color: $color;
+    cursor: pointer;
+  }
+
+  &__input::placeholder {
+    @include font-setting(400, 9px, 18px, upper);
+    letter-spacing: 1px;
+    color: $color;
+  }
+
+
+
+  &__input:last-child {
+    border-right: 1px solid $color;
+  }
+
+  &__input_next-row {
+    border-top: none;
+  }
+
+  &__input_last {
+    min-width: 260px;
+  }
+
+  &__button {
+    @extend %button-reset;
+    @include font-setting(400, 10px, 13px, upper);
+    text-align: center;
+    letter-spacing: 1px;
+    background: $color;
+    border: 1px solid $color;
+    box-sizing: border-box;
+    color: $background;
+    width: 80px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-width: map-get($width-page , 'mobile')) {
+  .form {
+    padding-right: 0;
+
+    &__row {
+      max-width: 280px;
+    }
+
+    &__input {
+      max-width: 140px;
+    }
+
+    &__input_last {
+      min-width: 200px;
+    }
+  }
+}
+

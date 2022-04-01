@@ -1,0 +1,12 @@
+.main {
+  @include grid-columns (2);
+}
+
+@media screen and (max-width: map-get($width-page , 'tablet')) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
