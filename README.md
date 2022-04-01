@@ -22,4 +22,5 @@
 
 **Ссылка на проект**
 
-* 
+* https://santip-a.github.io/auto-magazine/
+
