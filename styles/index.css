@@ -465,11 +465,11 @@ template {
   height: 26px;
 }
 .header__button_type_desctop {
-  background-image: url("../../images/icon-open.svg");
+  background-image: url("../images/icon-open.svg");
   visibility: hidden;
 }
 .header__button_type_mobile {
-  background-image: url("../../images/icon-close.svg");
+  background-image: url("../images/icon-close.svg");
 }
 
 @media screen and (max-width: 768px) {
@@ -725,11 +725,11 @@ template {
   cursor: pointer;
 }
 .gallery__button_type_left {
-  background-image: url(../../images/arrow_left.svg);
+  background-image: url(../images/arrow_left.svg);
   background-size: cover;
 }
 .gallery__button_type_right {
-  background-image: url(../../images/arrow_right.svg);
+  background-image: url(../images/arrow_right.svg);
   margin-left: 27px;
   background-size: cover;
 }
