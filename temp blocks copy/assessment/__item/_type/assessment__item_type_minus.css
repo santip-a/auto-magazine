@@ -1,0 +1,3 @@
+.assessment__item_type_minus::before {
+  content: "- ";
+}

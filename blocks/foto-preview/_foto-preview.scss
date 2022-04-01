@@ -1,0 +1,11 @@
+.foto-preview {
+  padding: 150px 0;
+}
+
+@media screen and (max-width: map-get($width-page , 'tablet')) {
+  .foto-preview {
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,31 @@
+@mixin font-setting ($weight, $size, $height, $upper: false) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  @if ($upper == 'upper') {
+    text-transform: uppercase;
+  }
+}
+
+
+// грид, $fr - количество колонок
+@mixin grid-columns ($fr) {
+  @extend %grid;
+  $column-fr: '';
+  @for $i from 1 through $fr {
+    $column-fr: #{$column-fr} + ' 1fr';
+  }
+  grid-template-columns: $column-fr;
+}
+
+@mixin line ($position) {
+  border-#{$position}: 1px solid $color;
+}
+
+@mixin button-reset ($width, $height) {
+  @extend %button-reset;
+  width: $width;
+  height: $height;
+  box-sizing: border-box;
+  }
+

@@ -1,0 +1,31 @@
+.form__input {
+  display: inline-block;
+  margin: 0;
+  padding-left: 11px;
+  max-width: 170px;
+  min-height: 32px;
+  border: none;
+  border: 1px solid #E1FD2C;
+  border-right: none;
+  background: #191D2C;
+  box-sizing: border-box;
+  outline: none;
+  color: #E1FD2C;
+  cursor: pointer;
+}
+
+.form__input::placeholder {
+  padding: 7px 0;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #E1FD2C;
+}
+
+
+
+.form__input:last-child {
+  border-right: 1px solid #E1FD2C;;
+}
