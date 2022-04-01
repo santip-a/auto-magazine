@@ -1,4 +1,4 @@
-# Проект: Место
+# Проект: Auto-magazine
 
 ### Обзор
 
@@ -22,5 +22,5 @@
 
 **Ссылка на проект**
 
-* (https://santip-a.github.io/auto-magazine/)
+* [https://santip-a.github.io/auto-magazine/](https://santip-a.github.io/auto-magazine/)
 
