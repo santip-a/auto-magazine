@@ -814,7 +814,7 @@ template {
 }
 .info__radio-visible {
   display: inline-block;
-  background-image: url(../images/button-check.svg);
+  background-image: url(/images/button-check.svg);
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
@@ -822,7 +822,7 @@ template {
   cursor: pointer;
 }
 .info__radio:checked + .info__radio-visible {
-  background-image: url(../images/button-read_active.svg);
+  background-image: url(/images/button-check_active.svg);
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
