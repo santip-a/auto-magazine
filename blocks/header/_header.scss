@@ -1,41 +1,24 @@
 .header {
-  position: relative;
-  border-bottom: $border-bottom;
-
-  &__logo {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-
-  &__menu {
+  @include line(bottom);
+    min-height: 70px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px 0 26px;
-  }
 
-  &__menu_type_mobile {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    background-color: $background;
-  }
-
-  &__menu_type_unhidden {
-    display: none;
-  }
+    &__menu {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
 
   &__navigation {
     display: inline-block;
-    margin-left: 50px;
+    padding-left: 50px;
+    padding-top: 0;
   }
 
+  &__logo {
+    margin: 0 auto;
+  }
 
   &__list {
     @extend %list-reset;
@@ -54,20 +37,24 @@
 
   &__button {
     @extend %button-reset;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 35px 0 auto;
     background-size: cover;
-    margin-right: 34px;
     width: 26px;
     height: 26px;
-  }
-
-  &__button_type_desctop {
     background-image: url('../images/icon-open.svg');
     visibility: hidden;
   }
 
+  &__button:hover {
+    opacity: .6;
+    transition: opacity .4s ease;
+  }
+
+
   &__button_type_mobile {
     background-image: url('../images/icon-close.svg');
-
   }
 
 }
@@ -75,17 +62,27 @@
 
 @media screen and (max-width: (map-get($width-page , 'tablet-mini'))) {
   .header {
-    &__button_type_desctop {
+    &__button {
       visibility: visible;
     }
 
-    &__navigation_type_desctop {
-      visibility: hidden;
+    &__list {
+      display: none;
     }
 
-    &__menu_type_mobile {
-      visibility: visible;
+    &__visible {
+      display: block;
     }
+
+
+    &__logo-hidden {
+      display: none;
+    }
+
+    &__menu_mobile {
+      display: flex;
+    }
+
   }
 }
 
@@ -93,6 +90,7 @@
 
 @media screen and (max-width: map-get($width-page , 'mini-mobile')) {
   .header {
+
     &__logo {
       width: 100px;
     }
@@ -102,8 +100,27 @@
       height: 20px;
       margin-right: 20px;
     }
+
+    &__navigation {
+      padding-left: 20px;
+      font-size: 11px;
+    }
+
+    &__item {
+      margin-right: 12px;
+      letter-spacing: .6px;
+    }
+
+    &__button {
+      margin: 0 20px 0 auto;
+      width: 20px;
+      height: 20px;
+    }
+
   }
 }
+
+
 
 
 

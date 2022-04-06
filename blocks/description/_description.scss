@@ -1,12 +1,13 @@
 .description {
-  padding: 41px 50px 45px;
+  padding: 41px 50px 44px;
+  @include line(bottom);
 
   &__text {
     @include font-setting(300, 30px, 42px);
     margin: 0;
   }
 
-  &__text_accentuated {
+  &__text-accent {
     font-weight: 400;
   }
 }

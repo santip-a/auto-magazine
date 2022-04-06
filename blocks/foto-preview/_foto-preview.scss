@@ -1,5 +1,6 @@
 .foto-preview {
-  padding: 150px 0;
+  padding: 149px 0 150px;
+  @include line(bottom);
 }
 
 @media screen and (max-width: map-get($width-page , 'tablet')) {

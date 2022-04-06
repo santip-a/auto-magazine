@@ -2,14 +2,12 @@
   @include grid-columns(2);
 
 
+
   &__subscription {
-    padding: 50px;
+    padding: 49px;
+    @include line(right);
   }
 
-  &__title {
-    margin: 0;
-    @include font-setting(400, 46px, 46px);
-  }
 
   &__subtitle {
     margin: 16px 0 64px;
@@ -31,11 +29,6 @@
     letter-spacing: 1px;
   }
 
-  &__line {
-    @include line(right);
-  }
-
-
 }
 
 
@@ -43,7 +36,7 @@
 @media screen and (max-width: map-get($width-page , 'tablet')) {
   .footer {
 
-    &__line {
+    &__subscription {
       border: none;
     }
 
@@ -67,10 +60,6 @@
     &__subscription {
       padding: 20px 0 0 0;
       margin: 0 auto;
-    }
-
-    &__line {
-      border: none;
     }
 
     &__logo {
@@ -97,9 +86,6 @@
       margin: 0 auto;
     }
 
-    &__title {
-      @include font-setting(400, 26px, 26px);
-    }
 
     &__subtitle {
       margin: 13px 0 60px;

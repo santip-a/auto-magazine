@@ -1,17 +1,18 @@
 .info {
-  min-height: 499px;
+  min-height: 500px;
   padding: 50px 50px 46px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  @include line(bottom);
 
   &__text {
     margin: 0;
     @include font-setting(300, 30px, 42px);
   }
 
-  &__text_accentuated {
+  &__text-accent {
     font-weight: 400;
   }
 
@@ -69,9 +70,12 @@
 }
 
 
+
+
 @media screen and (max-width: map-get($width-page , 'mini-mobile')) {
   .info {
     padding: 20px;
+    padding-bottom: 17px;
     min-height: 287px;
 
     &__text {

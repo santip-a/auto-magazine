@@ -1,20 +1,21 @@
 // Блок хедара
-const headerMenu = document.querySelector('.header');
-const buttonMenu = headerMenu.querySelector('.header__button_type_desctop');
-const mobileMenu = headerMenu.querySelector('.header__menu_type_mobile');
-const buttonMobile = mobileMenu.querySelector('.header__button_type_mobile');
+const header = document.querySelector('.header');
+const headerButton = header.querySelector('.header__button');
+const headerNavigation = header.querySelector('.header__list');
+const headerLogo = header.querySelector('.header__logo');
+const headerMenu = header.querySelector('.header__menu');
 
 // Блок галереи
 const galleryBlock = document.querySelector('.gallery');
-const arrowLeftGallery = galleryBlock.querySelector('.gallery__button_type_left');
-const arrowRightGallery = galleryBlock.querySelector('.gallery__button_type_right');
+const arrowLeftGallery = galleryBlock.querySelector('.gallery__button_type_back');
+const arrowRightGallery = galleryBlock.querySelector('.gallery__button_type_next');
 const imageGallery = galleryBlock.querySelector('.gallery__picture');
 
 // Блок ссылок на прессу
 const infoBlock = document.querySelector('.info');
 const linkInfo = infoBlock.querySelector('.info__link');
 const textInfo = infoBlock.querySelector('.info__text-subtitle');
-const textAccentuatedInfo = infoBlock.querySelector('.info__text_accentuated');
+const textAccentuatedInfo = infoBlock.querySelector('.info__text-accent');
 
 // Блок футера
 const footerBlock = document.querySelector('.footer');
@@ -69,26 +70,38 @@ function checkInput() {
   else { buttonFooter.textContent = 'ПОДПИСКА' }
 }
 
+// Проверка заполнения инпута e-mail
+function checkEmail (fieldInput) {
+  if (fieldInput.value.includes('@')) {
+    inputsFlag[2] = led;
+  }
+  else {
+    inputsFlag[2] = true;
+  }
+
+}
+
 // Проверка заполнения инпутов и смена текста на кнопке ч.1
 function ctrlButton(inputID) {
   led = inputID.value.trim().length === 0;
   if (inputID === inputName) { inputsFlag[0] = led }
   if (inputID === inputSurname) { inputsFlag[1] = led }
-  if (inputID === inputMail) { inputsFlag[2] = led }
+  if (inputID === inputMail ) { checkEmail(inputMail)  }
   checkInput()
 }
 
 
 //============== ДЕЙСТВИЯ ========================================
 
-// Меняем блоки хедера
-buttonMenu.addEventListener('click', function() {
-  mobileMenu.classList.remove('header__menu_type_unhidden');
+
+// меняем меню хеадера
+headerButton.addEventListener('click', function() {
+  headerNavigation.classList.toggle('header__visible');
+  headerButton.classList.toggle('header__button_type_mobile');
+  headerLogo.classList.toggle('header__logo-hidden');
+  headerMenu.classList.toggle('header__menu_mobile');
 })
 
-buttonMobile.addEventListener('click', function() {
-  mobileMenu.classList.add('header__menu_type_unhidden');
-})
 
 // Нажатие на кнопку "Влево" прокрутки галереии
 arrowLeftGallery.addEventListener('click', function () {

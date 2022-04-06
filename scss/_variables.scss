@@ -3,8 +3,6 @@ $background: #191D2C;
 $color: #E1FD2C ;
 $font-family: 'Source Sans Pro', Arial, sans-serif;
 
-$border-bottom: 1px solid #E1FD2C;
-
 $width-page: (
   'desktop': 1440px,
   'laptop': 1024px,
@@ -12,4 +10,5 @@ $width-page: (
   'tablet-mini': 768px,
   'mobile': 690px,
   'mini-mobile': 480px,
+  'micro-mobile': 320px,
 )

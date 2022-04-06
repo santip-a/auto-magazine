@@ -1,12 +1,15 @@
 .assessment {
   @include grid-columns(2);
 
+
   &__elements {
     padding-left: 50px;
+    @include line(left);
+    @include line(bottom);
   }
 
   &__title {
-    margin: 41px 0 0;
+    margin: 40px 0 0;
     letter-spacing: 2px;
     @include font-setting(400, 30px, 37px, upper);
   }
@@ -18,6 +21,7 @@
 
   &__item {
     @include font-setting(300, 22px, 32px);
+    margin-top: 1px;
   }
 
   &__item_type_plus::before {
@@ -28,15 +32,16 @@
     content: "- ";
   }
 
-  &__line {
-    @include line(right);
-  }
 }
 
 @media screen and (max-width: map-get($width-page , 'tablet')) {
   .assessment {
     &__elements {
-      padding-bottom: 278px;
+      padding-bottom: 281px;
+    }
+
+    &__elements:first-child {
+      border-left: none;
     }
   }
 }
@@ -57,7 +62,7 @@
 
     &__elements {
       padding-left: 20px;
-      padding-bottom: 14px;
+      padding-bottom: 12px;
     }
 
     &__list {
@@ -68,9 +73,6 @@
       padding-bottom: 6px;
     }
 
-    &__line {
-      @include line(bottom);
-    }
   }
 }
 

@@ -1,15 +1,11 @@
 .gallery {
+  @include line(bottom);;
 
   &__carousel {
     margin: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__title {
-    margin: 0;
-    @include font-setting(400, 46px, 46px);
   }
 
   &__button {
@@ -22,12 +18,12 @@
     cursor: pointer;
   }
 
-  &__button_type_left {
+  &__button_type_back {
     background-image: url(../images/arrow_left.svg);
     background-size: cover;
   }
 
-  &__button_type_right {
+  &__button_type_next {
     background-image: url(../images/arrow_right.svg);
     margin-left: 27px;
     background-size: cover;
@@ -40,8 +36,7 @@
     padding: 0 20px;
 
     &__picture {
-      margin: 35px auto 0;
-      max-width: 700px;
+      margin: 33px auto 50px;
     }
 
     &__carousel {
@@ -52,12 +47,8 @@
 
 @media screen and (max-width: map-get($width-page , 'mini-mobile')) {
   .gallery {
-    &__title {
-      @include font-setting(400, 26px, 26px);
-    }
-
     &__carousel {
-      margin: 45px 0 20px;
+      margin: 50px 0 20px;
     }
 
     &__button {
@@ -65,11 +56,22 @@
     }
 
     &__picture {
-      margin: 19px auto 0;
+      margin: 20px auto 0;
+
     }
 
-    &__button_type_right {
+    &__button_type_next {
       margin-left: 15px;
     }
   }
 }
+
+@media screen and (max-width: map-get($width-page , 'micro-mobile')) {
+  .gallery {
+    &__picture {
+      max-height: 204px;
+    }
+  }
+
+}
+

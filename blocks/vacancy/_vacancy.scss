@@ -1,3 +1,8 @@
+.vacancy {
+  @include line(bottom);
+  @include line(left);
+}
+
 @media screen and (max-width: map-get($width-page , 'tablet')) {
   .vacancy {
     display: none;
