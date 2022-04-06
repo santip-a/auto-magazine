@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>auto-magazine</title>
+  <link rel="shortcut icon" href="иконка">
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <div class="header__menu">
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="#fact">Факты</a></li>
+            <li class="header__item"><a class="header__link" href="#gallery">Галерея</a></li>
+            <li class="header__item"><a class="header__link" href="#press">Пресса</a></li>
+          </ul>
+        </nav>
+        <img class="header__logo" src="./images/logo.svg" alt="Логотип.">
+        <button class="header__button"></button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="topic">
+        <h1 class="topic__title">volkswagen t1</h1>
+        <p class="topic__subtitle">Новая версия популярного микроавтобуса</p>
+        <p class="topic__text">С электро двигателем</p>
+        <img class="picture topic__picture" src="./images/auto.jpg" alt="Автомобил Фольгсваген T1.">
+        <button class="topic__button" type="button">Подробнее</button>
+      </section>
+
+      <section class="foto-preview">
+        <img class="picture" src="./images/auto.jpg" alt="Автомобил Фольгсваген T1.">
+      </section>
+
+      <section class="description" id="fact">
+        <p class="description__text"><span class="description__text-accent">VW T1 Electro:</span>
+          Отделение Volkswagen Commercial Vehicles представило концепт e&#8209;Bulli: классический вэн T1 1966 года
+          с&nbsp;электрической силовой установкой. По&nbsp;словам производителя, проект получит коммерческое
+          продолжение, и через фирму&#8209;партнера eClassics наборы для конверсии микроавтобусов в электрокары
+          и&nbsp;уже готовые машины будут продавать частным клиентам.</p>
+      </section>
+
+      <section class="assessment">
+        <div class="assessment__elements">
+          <p class="assessment__title">Плюсы</p>
+          <ul class="assessment__list">
+            <li class="assessment__item assessment__item_type_plus">Экологичный</li>
+            <li class="assessment__item assessment__item_type_plus">Экономный</li>
+            <li class="assessment__item assessment__item_type_plus">Тихий</li>
+          </ul>
+        </div>
+        <div class="assessment__elements">
+          <p class="assessment__title">Минусы</p>
+          <ul class="assessment__list">
+            <li class="assessment__item assessment__item_type_minus">Дорогой</li>
+            <li class="assessment__item assessment__item_type_minus">Подзарядка</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <img class="picture gallery__picture" src="./images/gallery_1.jpg" alt="Автомобил Фольгсваген T1.">
+        <div class="gallery__carousel">
+          <h2 class="title">Галерея</h2>
+          <div class="gallery__buttons">
+            <button class="gallery__button gallery__button_type_back" type="button"></button>
+            <button class="gallery__button gallery__button_type_next" type="button"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="vacancy"></section>
+
+      <section class="press">
+        <h2 class="title">Пресса</h2>
+      </section>
+
+      <section class="info" id="press">
+        <p class="info__text"><span class="info__text-accent">Engadget:</span><span
+            class="info__text info__text-subtitle"> VW&rsquo;s e&#8209;BULLI concept shows how your classic van can
+            become an EV.</span></p>
+        <div class="info__item">
+          <div class="info__buttons-leaf">
+            <label for="engadget">
+              <input type="radio" class="info__radio" name="article" id="engadget" checked>
+              <span class="info__radio-visible"></span>
+            </label>
+            <label for="drive">
+              <input type="radio" class="info__radio" name="article" id="drive">
+              <span class="info__radio-visible"></span>
+            </label>
+          </div>
+          <a class="info__link" href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html" target="_blank">Читать</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__subscription">
+        <h2 class="title">Подписка</h2>
+        <p class="footer__subtitle">На новые спецвыпуски машин.</p>
+        <form class="form" name="subscription">
+          <div class="form__row">
+            <input class="form__input" type="text" placeholder="имя" id="input-name" name="subscription-name" required>
+            <input class="form__input" type="text" placeholder="фимилия" id="input-surname" name="subscription-surname" required>
+          </div>
+          <div class="form__row">
+            <input class="form__input form__input_type_mail" type="email" placeholder="почта" id="input-mail" name="subscription-email" required>
+            <button class="form__button" type="submit">подписка</button>
+          </div>
+        </form>
+      </div>
+      <div class="footer__logo-info">
+        <img class="footer__logo" src="./images/logo.svg" alt="Логотип.">
+        <p class="footer__copyright">&#169; Auto-Magazine 2021</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./scripts/index.js"></script>
+</body>
+
+</html>

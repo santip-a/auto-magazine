@@ -1,0 +1,10 @@
+.picture {
+  @extend %picture-default;
+}
+
+@media screen and (max-width: map-get($width-page , 'tablet')) {
+  .picture {
+    max-width: 700px;
+    max-height: 510px;
+  }
+}

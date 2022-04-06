@@ -1,0 +1,26 @@
+.description {
+  padding: 41px 50px 44px;
+  @include line(bottom);
+
+  &__text {
+    @include font-setting(300, 30px, 42px);
+    margin: 0;
+  }
+
+  &__text-accent {
+    font-weight: 400;
+  }
+}
+
+
+@media screen and (max-width: map-get($width-page , 'mini-mobile')) {
+  .description {
+    padding: 18px 20px 18px;
+    &__text {
+      @include font-setting(300, 16px, 27px);
+    }
+
+  }
+}
+
+

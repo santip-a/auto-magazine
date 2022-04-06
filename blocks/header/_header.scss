@@ -1,0 +1,126 @@
+.header {
+  @include line(bottom);
+    min-height: 70px;
+    display: flex;
+
+    &__menu {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
+
+  &__navigation {
+    display: inline-block;
+    padding-left: 50px;
+    padding-top: 0;
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__list {
+    @extend %list-reset;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 17px;
+    @include font-setting(400, 12px, 16px, upper);
+    letter-spacing: 1px;
+  }
+
+  &__link {
+    @extend %link-reset;
+  }
+
+  &__button {
+    @extend %button-reset;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 35px 0 auto;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+    background-image: url('../images/icon-open.svg');
+    visibility: hidden;
+  }
+
+  &__button:hover {
+    opacity: .6;
+    transition: opacity .4s ease;
+  }
+
+
+  &__button_type_mobile {
+    background-image: url('../images/icon-close.svg');
+  }
+
+}
+
+
+@media screen and (max-width: (map-get($width-page , 'tablet-mini'))) {
+  .header {
+    &__button {
+      visibility: visible;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__visible {
+      display: block;
+    }
+
+
+    &__logo-hidden {
+      display: none;
+    }
+
+    &__menu_mobile {
+      display: flex;
+    }
+
+  }
+}
+
+
+
+@media screen and (max-width: map-get($width-page , 'mini-mobile')) {
+  .header {
+
+    &__logo {
+      width: 100px;
+    }
+
+    &__button {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+    }
+
+    &__navigation {
+      padding-left: 20px;
+      font-size: 11px;
+    }
+
+    &__item {
+      margin-right: 12px;
+      letter-spacing: .6px;
+    }
+
+    &__button {
+      margin: 0 20px 0 auto;
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+}
+
+
+
+
+

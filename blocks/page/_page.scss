@@ -1,0 +1,4 @@
+.page {
+  max-width: map-get($width-page , 'desktop' );
+  margin: 0 auto;
+}

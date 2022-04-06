@@ -1,0 +1,11 @@
+.title {
+  margin: 0;
+    @include font-setting(400, 46px, 46px);
+}
+
+@media screen and (max-width: map-get($width-page , 'mini-mobile')) {
+  .title {
+    @include font-setting(400, 26px, 26px);
+  }
+}
+

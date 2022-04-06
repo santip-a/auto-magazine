@@ -1,0 +1,108 @@
+.topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  @include line(bottom);;
+
+  &__title {
+    margin: 180px 0 0;
+    @include font-setting (400, 19px, 28px, upper);
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 30px 0 0;
+    @include font-setting (400, 65px, 73px);
+    text-align: center;
+  }
+
+  &__text {
+    margin: 50px 0 0;
+    @include font-setting (400, 19px, 28px, upper);
+    text-align: center;
+  }
+
+  &__button{
+    margin: 60px 0 30px;
+    @include font-setting(400, 15px, 60px, upper);
+    @include button-reset(360px, 64px);
+    text-align: center;
+    letter-spacing: 1px;
+    border: 1px solid $color;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    background: $color;
+    color: $background;
+    font-weight: 600;
+    transition: background .3s ease;
+  }
+
+  &__picture {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: map-get($width-page , 'tablet')) {
+  .topic {
+
+    &__picture {
+      display: block;
+      // max-width: 700px;
+      // max-height: 510px;
+      margin: 100px auto 100px;
+    }
+
+    &__title {
+      margin: 100px 0 0;
+    }
+
+    &__button {
+      margin: 0 0 100px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: map-get($width-page , 'mini-mobile')) {
+  .topic {
+    &__title {
+      margin-top: 60px;
+      @include font-setting (400, 11px, 14px, upper);
+    }
+
+    &__subtitle {
+      margin-top: 26px;
+      @include font-setting (400, 38px, 50px);
+    }
+
+    &__text {
+      margin-top: 30px;
+      @include font-setting (400, 11px, 14px, upper);
+    }
+
+     &__button{
+      margin-top: 53px;
+      margin-bottom: 60px;
+      @include button-reset(280px, 64px);
+    }
+
+    &__picture {
+      margin-top: 60px;
+      margin-bottom: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($width-page , 'micro-mobile')) {
+  .topic {
+    &__picture {
+      max-height: 202px;
+    }
+  }
+}

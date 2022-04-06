@@ -1,0 +1,13 @@
+.press {
+  padding-top: 50px;
+  padding-left: 50px;
+  @include line(bottom);
+  @include line(right);
+}
+
+@media screen and (max-width: map-get($width-page , 'tablet')) {
+  .press {
+    display: none;
+  }
+}
+

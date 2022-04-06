@@ -1,0 +1,27 @@
+@import "../vendor/fonts";
+@import "../vendor/normalize";
+@import "../scss/variables";
+@import "../scss/extends";
+@import "../scss/mixin.scss";
+
+@import "../blocks/title/title";
+@import "../blocks/picture/picture";
+
+@import "../blocks/body/body";
+@import "../blocks/page/page";
+@import "../blocks/header/header";
+@import "../blocks/main/main";
+@import "../blocks/topic/topic";
+
+@import "../blocks/foto-preview/foto-preview";
+@import "../blocks/description/description";
+@import "../blocks/assessment/assessment";
+@import "../blocks/gallery/gallery";
+@import "../blocks/press/press";
+@import "../blocks/info/info";
+@import "../blocks/footer/footer";
+@import "../blocks/form/form";
+@import "../blocks/vacancy/vacancy";
+
+
+
